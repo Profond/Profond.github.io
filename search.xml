@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>TestImage</title>
+      <link href="/2021/08/23/TestImage/"/>
+      <url>/2021/08/23/TestImage/</url>
+      
+        <content type="html"><![CDATA[<p>1.测试版本3.0</p><p>2.图片显示问题</p><p>3.<img src="/2021/08/23/TestImage/%E8%B4%AD%E7%89%A9%E8%BD%A6.png" alt="购物"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Test </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>testtwo</title>
       <link href="/2021/08/23/testtwo/"/>
       <url>/2021/08/23/testtwo/</url>
