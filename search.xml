@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>hexo搭建博客图片无法显示问题</title>
+      <link href="/2021/08/24/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/"/>
+      <url>/2021/08/24/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>1.安装插件npm install hexo-asset-image –save</p><p>2.修改主_config.yml配置</p><p><img src="/2021/08/24/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/01-16297758930222.png" alt="1"></p><p>3.修改hexo-asset-image(位于themes下)</p><p><img src="/2021/08/24/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/2.png" alt="2"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>TestImage</title>
       <link href="/2021/08/23/TestImage/"/>
       <url>/2021/08/23/TestImage/</url>
@@ -11,69 +30,6 @@
         <content type="html"><![CDATA[<p>1.测试版本3.0</p><p>2.图片显示问题</p><p>3.<img src="/2021/08/23/TestImage/%E8%B4%AD%E7%89%A9%E8%BD%A6.png" alt="购物"></p>]]></content>
       
       
-      
-        <tags>
-            
-            <tag> Test </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>testtwo</title>
-      <link href="/2021/08/23/testtwo/"/>
-      <url>/2021/08/23/testtwo/</url>
-      
-        <content type="html"><![CDATA[<p>2.再次测试图片</p><p>3.<img src="/2021/08/23/testtwo/%E8%B4%AD%E7%89%A9%E8%BD%A6.png" alt="11"></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Testtwo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>testone</title>
-      <link href="/2021/08/23/testone/"/>
-      <url>/2021/08/23/testone/</url>
-      
-        <content type="html"><![CDATA[<p>1.<img src="/2021/08/23/testone/collection.png" alt="测试"></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Test </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>my-first-blog</title>
-      <link href="/2021/08/20/%E2%80%98my-first-blog%E2%80%99/"/>
-      <url>/2021/08/20/%E2%80%98my-first-blog%E2%80%99/</url>
-      
-        <content type="html"><![CDATA[<p>1.开始测试博客文章图片插入</p><p><img src="/2021/08/20/%E2%80%98my-first-blog%E2%80%99/collection.png" alt="collection"></p><pre class="line-numbers language-java" data-language="java"><code class="language-java">system<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"hello world"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> test </tag>
-            
-        </tags>
       
     </entry>
     
