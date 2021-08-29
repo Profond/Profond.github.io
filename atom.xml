@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>ColaMilk</title>
   
-  
+  <subtitle>Welcome</subtitle>
   <link href="https://profond.github.io/atom.xml" rel="self"/>
   
   <link href="https://profond.github.io/"/>
