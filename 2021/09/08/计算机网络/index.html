@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo搭建博客图片无法显示问题, ColaMilk">
+    <meta name="keywords" content="计算机网络, ColaMilk">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo搭建博客图片无法显示问题 | ColaMilk</title>
+    <title>计算机网络 | ColaMilk</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -321,12 +321,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo搭建博客图片无法显示问题</h1>
+                    <h1 class="description center-align post-title">计算机网络</h1>
                 </div>
             </div>
         </div>
@@ -442,8 +442,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                                <span class="chip bg-color">计算机网络</span>
                             </a>
                         
                     </div>
@@ -458,21 +458,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-24
+                    2021-09-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-24
+                    2021-09-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    29
+                    1.1k
                 </div>
                 
 
@@ -492,11 +492,64 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>1.安装插件npm install hexo-asset-image –save</p>
-<p>2.修改主_config.yml配置</p>
-<p><img src="/2021/08/24/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/01-16297758930222.png" alt="1"></p>
-<p>3.修改hexo-asset-image(位于themes下)</p>
-<p><img src="/2021/08/24/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/2.png" alt="2"></p>
+                <h4 id="计算机网络结构"><a href="#计算机网络结构" class="headerlink" title="计算机网络结构"></a>计算机网络结构</h4><p><strong>五层结构：</strong></p>
+<ul>
+<li>应用层                </li>
+<li>运输层</li>
+<li>网络层</li>
+<li>数据链路层</li>
+<li>物理层</li>
+</ul>
+<p><strong>TCP/IP结构：</strong></p>
+<ul>
+<li>应用层</li>
+<li>运输层</li>
+<li>网际层</li>
+<li>网络接口层</li>
+</ul>
+<p><strong>OSI结构：</strong></p>
+<ul>
+<li>应用层</li>
+<li>表示层</li>
+<li>会话层</li>
+<li>运输层</li>
+<li>网络层</li>
+<li>数据链路层</li>
+<li>物理层</li>
+</ul>
+<p><strong>各层的职责：</strong></p>
+<p>应用层：通过应用进程之间的交互完成特定的网络应用</p>
+<p>运输层：向两台主机进程之间提供通用的传输服务</p>
+<p>网络层：选择合适的网间路由和交换节点，确保数据及时传输</p>
+<p>数据链路层：将网络层传递下来的IP数据报封装成帧</p>
+<p>物理层：实现计算机相邻节点之间比特流的透明传送，尽可能屏蔽掉具体传输介质和物理设备的差异</p>
+<p><strong>三次握手：</strong></p>
+<p><img src="/2021/09/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.png"></p>
+<p><strong>为什么需要三次握手？</strong>(三次握手的本质是确认客户端和服务器之间的发送接收是否都正常)</p>
+<p>1.第一次握手，客户端什么都无法确认，服务器可以确认自身接收和客户端发送没问题</p>
+<p>2.第二次握手，客户端可以确认自身发送和接收，服务器的接收和发送也没问题，服务器可以确认自身接收和客户端发送没问题</p>
+<p>3.第三次握手，客户端可以确认自身发送和接收，服务器的接收和发送也没问题，服务器可以确认自身接收和发送没问题，客户端的发送和接收也没问题</p>
+<p><strong>为什么需要回传SYN+ACK？</strong>为了告诉发送方我收到的的确是你发过来的信息，回传SYN只确保了发送方到接收方之间的通道是正常的，接收方到发送之间的通道还需要ACK来确认。这样才能真的确保双方之间的通信无误。</p>
+<p><strong>四次挥手：</strong>客户端和服务器任何一方都可以在数据传输结束后主动发起连接释放通知，对方确认后将进入半关闭状态，等到对方也没有数据发送的时候，则发出连接释放通知。对方确认后，TCP连接彻底关闭</p>
+<p><img src="/2021/09/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/TCP%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.png" alt="TCP四次挥手"></p>
+<p>例如客户端(左边)主动发出连接释放通知FIN，服务器(右边)收到了连接释放通知后，发出确认信息ACK，此时客户端进入半关闭状态，当服务器也发送了连接释放通知FIN后，客户端最后一次发送确认信息ACK，之后TCP连接彻底关闭。(ACK为收到的FIN序号+1)</p>
+<p><strong>TCP协议如何保证可靠传输？</strong></p>
+<p>1.检验和</p>
+<p>2.流量控制</p>
+<p>3.拥塞控制</p>
+<p>4.ARQ协议</p>
+<p>5.超时重传</p>
+<p>ARQ协议：停止等待ARQ协议和连续ARQ协议</p>
+<p>停止等待ARQ协议: 优点—简单 缺点—-通道利用率低、等待时间长</p>
+<p>连续ARQ协议： 优点—-信道利用率高，容易实现，即使确认丢失，也不必重传。缺点—-不能向发送方反映出接收方已经正确收到的所有分组的信息 （l例如A—&gt;B 发送5条数据 中间丢失3号数据 1–2–?–4–5最后按序到达的分组为1–2，所以需要重传3–4–5)</p>
+<p>Cookie的作用？和session的区别是什么？</p>
+<p>两者都是用来跟踪浏览器用户身份的会话方式</p>
+<p>作用： </p>
+<p>Cookie一般用来保存用户信息，例如下次访问同一个网站的时候，登陆信息自动帮你填写好了，这是由于在Cookie中存放了Token，通过Token值获取了用户信息</p>
+<p>session一般用来通过服务端保存用户状态，例如购物车场景</p>
+<p>区别：Cookie 数据保存在客户端(浏览器端)，Session 数据保存在服务器端。</p>
+<p>HTTP和HTTPS区别：</p>
+<p>前者默认http://开始，端口默认80，后者默认https://开始，端口默认443，前者都是以明文的方式传输数据，后者是运行在SSL/TLS之上的HTTP协议采用对称加密传输数据，安全性高于http。</p>
 
                 
             </div>
@@ -523,7 +576,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://profond.github.io/2021/08/24/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/">https://profond.github.io/2021/08/24/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/</a>
+                    <a href="https://profond.github.io/2021/09/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">https://profond.github.io/2021/09/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -561,8 +614,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
+                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                                    <span class="chip bg-color">计算机网络</span>
                                 </a>
                             
                         </div>
@@ -734,9 +787,56 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/09/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="计算机网络">
+                        
+                        <span class="card-title">计算机网络</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ColaMilk
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                        <span class="chip bg-color">计算机网络</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/09/04/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
                     <div class="card-image">
@@ -754,9 +854,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -772,43 +872,6 @@
                         <span class="chip bg-color">Java</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/08/20/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-20
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            ColaMilk
-                            
-                        </span>
-                    </div>
                 </div>
                 
             </div>
