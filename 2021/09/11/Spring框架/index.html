@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据库知识, ColaMilk">
+    <meta name="keywords" content="Spring框架, ColaMilk">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据库知识 | ColaMilk</title>
+    <title>Spring框架 | ColaMilk</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -321,12 +321,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据库知识</h1>
+                    <h1 class="description center-align post-title">Spring框架</h1>
                 </div>
             </div>
         </div>
@@ -442,8 +442,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                <span class="chip bg-color">数据库</span>
+                            <a href="/tags/Spring/">
+                                <span class="chip bg-color">Spring</span>
                             </a>
                         
                     </div>
@@ -458,21 +458,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-10
+                    2021-09-11
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-10
+                    2021-09-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2.5k
                 </div>
                 
 
@@ -492,111 +492,140 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="1-什么是MySQL？"><a href="#1-什么是MySQL？" class="headerlink" title="1.什么是MySQL？"></a>1.什么是MySQL？</h4><p>一个开源的关系型数据库，默认端口3306</p>
-<h4 id="1-1数据库引擎MyISAM和InnoDB的区别"><a href="#1-1数据库引擎MyISAM和InnoDB的区别" class="headerlink" title="1.1数据库引擎MyISAM和InnoDB的区别"></a>1.1数据库引擎MyISAM和InnoDB的区别</h4><ol>
-<li><p>是否支持行级锁：MyISAM只有表级锁，InnoDB支持表级锁和行级锁，默认行级锁</p>
-</li>
-<li><p>是否支持事务和崩溃后的安全恢复：MyISAM强调的是性能，每次查询具有原子性，执行速度比InnoDB类型更快，但是不提供事务支持。但是InnoDB提供事务支持事务，外部键等高级数据库。具有事务、回滚和崩溃修复能力的事务安全型表</p>
-</li>
-<li><p>是否支持外键：MyISAM不支持外键，InnoDB支持外键</p>
-</li>
-<li><p>是否支持MVCC：仅InnoDb支持，应对高并发事务，InnoDB比单纯的加锁更高效；</p>
-<p>MVCC只在 READ COMMITED 和 REPEATABLE READ 两个隔离级别下工作；MVCC可以使用乐观锁和悲观锁来实现</p>
-</li>
+                <h4 id="1-什么是Spring框架？"><a href="#1-什么是Spring框架？" class="headerlink" title="1. 什么是Spring框架？"></a>1. 什么是Spring框架？</h4><p>Spring是一个轻量型的开发框架，旨在提高开发人员的开开发效率一级系统的可维护性</p>
+<p>Spring的6个特征：</p>
+<ul>
+<li>核心技术</li>
+<li>测试</li>
+<li>Web支持</li>
+<li>集成</li>
+<li>语言</li>
+</ul>
+<h4 id="1-1-列举一些重要的Spring模块"><a href="#1-1-列举一些重要的Spring模块" class="headerlink" title="1.1 列举一些重要的Spring模块"></a>1.1 列举一些重要的Spring模块</h4><ul>
+<li>Spring Core：基础，Spring其他所有的功能都需要依赖该类库，主要提供IOC依赖注入功能</li>
+<li>Spring Aspects：该模块为与AspectJ的集成提供支持</li>
+<li>Spring Aop：提供了面向切面的编程实现</li>
+<li>Spring JMS：Java消息服务</li>
+<li>Spring ORM: 用于支持Hibernate等ORM工具</li>
+<li>Spring Web：为创建Web应用程序提供支持</li>
+<li>Spring Test：提供了对JUnit和TestNg测试的支持</li>
+</ul>
+<h4 id="1-3-RestController-和-Controller"><a href="#1-3-RestController-和-Controller" class="headerlink" title="1.3  @RestController 和@Controller"></a>1.3  @RestController 和@Controller</h4><p>@Controller 返回的是一个视图</p>
+<p>@RestController = @ResponseBody + @Controller 返回JSON或者XML形式数据</p>
+<p>（返回对象，对象数据以xml或者JSON的格式写入到HTTP响应（Response）中）</p>
+<blockquote>
+<p><code>@ResponseBody</code> 注解的作用是将 <code>@Controller</code> 的方法返回的对象通过适当的转换器转换为指定的格式之后，写入到HTTP 响应(Response)对象的 body 中，通常用来返回 JSON 或者 XML 数据，返回 JSON 数据的情况比较多。</p>
+</blockquote>
+<h4 id="1-4-Spring-IOC-amp-AOP"><a href="#1-4-Spring-IOC-amp-AOP" class="headerlink" title="1.4 Spring IOC&amp;AOP"></a>1.4 Spring IOC&amp;AOP</h4><p>IOC：它是一种设计思想，将程序中手动创建对象的控制权移交给Spring框架来管理。IOC容器是Spring用来实现IOC的载体，IOC容器实际上就是个Map（Key，value），Map中存放的是各种对象。</p>
+<p>将对象之间的相互依赖关系交给IOC容器来管理，由IOC容器来完成对象的注入。IOC容器就像一个工厂一样，当我们需要创建一个对象的时候，只需要配置好配置文件/注解即可，完全不用考虑对象是如何被创建出来的</p>
+<p><strong>Spring IOC的初始化过程：</strong></p>
+<p><img src="/2021/09/11/Spring%E6%A1%86%E6%9E%B6/SpringIOC%E5%88%9D%E5%A7%8B%E5%8C%96%E8%BF%87%E7%A8%8B.png" alt="SpringIOC初始化过程"></p>
+<p><strong>IOC的依赖倒置：</strong></p>
+<p><img src="/2021/09/11/Spring%E6%A1%86%E6%9E%B6/v2-c68248bb5d9b4d64d22600571e996446_720w.png" alt="v2-c68248bb5d9b4d64d22600571e996446_720w"></p>
+<p>转变——–&gt;</p>
+<p><img src="/2021/09/11/Spring%E6%A1%86%E6%9E%B6/v2-e64bf72c5c04412f626b21753aa9e1a1_720w.png" alt="v2-e64bf72c5c04412f626b21753aa9e1a1_720w"></p>
+<h4 id="1-5-SpringAOP和AspectJAOP区别？"><a href="#1-5-SpringAOP和AspectJAOP区别？" class="headerlink" title="1.5  SpringAOP和AspectJAOP区别？"></a>1.5  SpringAOP和AspectJAOP区别？</h4><p>SpringAOP是运行时增强，AspectJAOP是编译时增强，前者基于代理，后者基于字节码操作；</p>
+<h4 id="1-6-Spring中的Bean的作用域有哪些？"><a href="#1-6-Spring中的Bean的作用域有哪些？" class="headerlink" title="1.6 Spring中的Bean的作用域有哪些？"></a>1.6 Spring中的Bean的作用域有哪些？</h4><ul>
+<li>Singleton：唯一的Bean实例，Spring默认bean都是单例的</li>
+<li>prototype：每次请求都会创建一个新的实例</li>
+<li>request：每一次HTTP请求都会产生一个新的Bean，该Bean仅在当前HTTP request内有效</li>
+<li>session：每一次HTTP请求都会产生一个新的Bean，该Bean仅在当前HTTP session内有效</li>
+<li>global-session：与session不同的是，所有的session共享一个session Bean，Spring5已经移除</li>
+</ul>
+<p>Spring创建Bean的时候如果没有配置作用域，默认是Singleton作用域</p>
+<p><img src="/2021/09/11/Spring%E6%A1%86%E6%9E%B6/123.png" alt="123"></p>
+<p><strong>1.7 Spring中的单例Bean的线程安全问题了解吗？</strong></p>
+<p>当多个线程操作同一个对象的时候，对这个对象的非静态成员变量的写操作会存在线程安全问题</p>
+<p>解决方式：</p>
+<ol>
+<li>在Bean对象中避免定义可变的成员变量(不现实)</li>
+<li>在类中定义一个ThreadLocal成员变量，将需要的可变成员变量保存在ThreadLocal中</li>
 </ol>
-<h4 id="1-2索引"><a href="#1-2索引" class="headerlink" title="1.2索引"></a>1.2索引</h4><p>MySQl索引使用的数据结构主要为：<strong>BTree索引</strong>和<strong>哈希索引</strong></p>
-<p>当绝大多数需求为单条记录查询的时候，可以选择哈希索引，查询性能最快；其余大多数场景，建议选择BTree索引</p>
-<p><strong>MyISAm：</strong>非聚簇索引</p>
-<p><strong>InnoDB：</strong>聚簇索引</p>
-<p><strong>1.3什么是事务？</strong></p>
-<p>事务是逻辑上的一组操作，要么都执行，要么都不执行</p>
-<h4 id="1-31事务的四大特性ACID"><a href="#1-31事务的四大特性ACID" class="headerlink" title="1.31事务的四大特性ACID"></a>1.31事务的四大特性ACID</h4><ol>
-<li>原子性：事务是最小的执行单位，不允许分割，执行的动作要么全部完成，要么完全不起作用</li>
-<li>一致性：执行事务前后，数据保持一致，多个事务对同一数据读取的结果是相同的</li>
-<li>隔离性：并发访问数据库时，一个用户的事务不被其他事务所干扰，各并发事务之间数据库是独立的；</li>
-<li>持久性：一个事务被提交之后。他对数据库中的数据的改变是持久的，及时数据库发生故障也不应该对其有任何的影响。</li>
+<p>注：ThreadLocal 中文较为准确的叫法为 <code>线程局部变量</code></p>
+<h4 id="1-8-Component-和-Bean-区别？"><a href="#1-8-Component-和-Bean-区别？" class="headerlink" title="1.8  @Component 和 @Bean 区别？"></a>1.8  @Component 和 @Bean 区别？</h4><ol>
+<li>作用对象不同 <code>@Component</code> 注解用于类，<code>@Bean</code>注解用于方法</li>
+<li><code>@Component</code>通常是通过类路径扫描自动侦测装配到Spring容器当中(<code>@ComponentScan</code>注解定义要扫描的路径)。<code>@Bean</code>注解通常是我们在标有该注解的方法中定义产生这个bean，<code>@Bean</code>会告诉Spring这是某个类的示例，当我需要的时候还给我；</li>
+<li><code>@Bean</code>注解比<code>@Component</code>注解的自定义性更强，更灵活，很多地方我们只能通过<code>@Bean</code>来注册Bean。例如我们引用第三方库中的类需要装配到Spring容器的时候，这时候只能通过<code>@Bena</code>来完成</li>
 </ol>
-<h4 id="1-4并发事务带来哪些问题？"><a href="#1-4并发事务带来哪些问题？" class="headerlink" title="1.4并发事务带来哪些问题？"></a>1.4并发事务带来哪些问题？</h4><ul>
-<li><strong>脏读：</strong>一个事务访问数据并对其进行了修改，但是修改并未提交到数据库的时候，另外一个事务也访问了这个数据(此时数据还未提交修改)。那么它读取到的数据被称为“脏数据”</li>
-<li><strong>丢失修改：</strong>一个事务读取一个数据时，另外一个事务也访问了该数据，那么在第一个事务修改了这个数据后，第二个事务也对它进行修改。这样第一个事务的修改结果就被丢失，因此被称为丢失修改。例如：事务1读取某张表中的数据a=20，事务2也读取a=20，事务1修改a=a-1，事务2修改a=a-1，最后a=19，事务1的修改丢失</li>
-<li><strong>不可重复读：</strong>在一个事务内多次读取同一数据。这个事务还没有结束时，另外一个事务也访问该数据。那么在第一个事务中的两次读数据之间，由于第二个事务的修改导致第一个事务两次读取的数据可能不太一样。这就发生了在一个事务内两次督导的数据是不一样的情况，因为称为不可重复读；</li>
-<li><strong>幻读：</strong>类似于不可重复读，例如事务1读取了几行数据，此时事务2并发插入了一些数据，随后事务1查询，会发现多了一些原本不存在的记录，就好像产生了幻觉一样</li>
-<li><em>不可重复读和幻读的区别</em>：不可重复读重点是修改，比如读取的某条记录发现其中的某些列值被修改，幻读的重点在于新增或者删除比如多次读取一条记录发现记录增多或者减少了。</li>
-</ul>
-<h4 id="1-5事务隔离级别有哪些？MySQL的默认隔离级别是？"><a href="#1-5事务隔离级别有哪些？MySQL的默认隔离级别是？" class="headerlink" title="1.5事务隔离级别有哪些？MySQL的默认隔离级别是？"></a>1.5事务隔离级别有哪些？MySQL的默认隔离级别是？</h4><p>SQL标准定义了四个隔离级别：</p>
+<h4 id="1-9-将一个类声明为Spring的Bean的注解有哪几个？"><a href="#1-9-将一个类声明为Spring的Bean的注解有哪几个？" class="headerlink" title="1.9 将一个类声明为Spring的Bean的注解有哪几个？"></a>1.9 将一个类声明为Spring的Bean的注解有哪几个？</h4><p>我们一般使用 <code>@Autowired</code> 注解自动装配 bean，要想把类标识成可用于 <code>@Autowired</code> 注解自动装配的 bean 的类,采用以下注解可实现：</p>
 <ul>
-<li>READ-UNCOMMITTED(读取未提交)： 最低的隔离级别，允许读取尚未提交的数据变更，可能会导致脏读、幻读或不可重复读。</li>
-<li>READ-COMMITTED(读取已提交)： 允许读取并发事务已经提交的数据，可以阻止脏读，但是幻读或不可重复读仍有可能发生。</li>
-<li>REPEATABLE-READ(可重复读)： 对同一字段的多次读取结果都是一致的，除非数据是被本身事务自己所修改，可以阻止脏读和不可重复读，但幻读仍有可能发生。</li>
-<li>SERIALIZABLE(可串行化)： 最高的隔离级别，完全服从ACID的隔离级别。所有的事务依次逐个执行，这样事务之间就完全不可能产生干扰，也就是说，该级别可以防止脏读、不可重复读以及幻读。</li>
+<li><strong>@Component</strong></li>
+<li><strong>@Service</strong></li>
+<li><strong>@Controller</strong></li>
+<li><strong>@Repository</strong></li>
 </ul>
-<table>
-<thead>
-<tr>
-<th align="center">隔离级别</th>
-<th align="center">脏读</th>
-<th align="center">不可重复读</th>
-<th align="center">幻读</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">READ-UNCOMMITTED</td>
-<td align="center">√</td>
-<td align="center">√</td>
-<td align="center">√</td>
-</tr>
-<tr>
-<td align="center">READ-COMMITTED</td>
-<td align="center">×</td>
-<td align="center">√</td>
-<td align="center">√</td>
-</tr>
-<tr>
-<td align="center">REPEATABLE-READ</td>
-<td align="center">×</td>
-<td align="center">×</td>
-<td align="center">√</td>
-</tr>
-<tr>
-<td align="center">SERIALIZABLE</td>
-<td align="center">×</td>
-<td align="center">×</td>
-<td align="center">×</td>
-</tr>
-</tbody></table>
-<p><strong>MySQL默认隔离级别是可重复读(REPEATABLE-READ)</strong> 但MySQL事务隔离级别下使用的是Next-Key Lock 锁算法，因此可以避免幻读的产生。所以说InnoDB 存储引擎的默认支持的隔离级别是 <strong>REPEATABLE-READ（可重读）</strong> 已经可以完全保证事务的隔离性要求，即达到了 SQL标准的 <strong>SERIALIZABLE(可串行化)</strong> 隔离级别。InnoDB存储引擎在<strong>分布式事务</strong>的情况下一般才会用到 **SERIALIZABLE(可串行化)**隔离级别</p>
-<p><strong>2.0 锁机制和InnoDB锁算法</strong></p>
+<p><strong>2.0 Spring中的Bean的生命周期？</strong></p>
 <ul>
-<li>MyISAM采用表级锁</li>
-<li>InnoDB支持行级锁和表级锁，默认行级锁</li>
+<li>Spring启动，查找并加载需要被Spring管理的bean，进行Bean的实例化</li>
+<li>Bean实例化后对将Bean的引入和值注入到Bean的属性中</li>
+<li>如果Bean实现了BeanNameAware接口的话，Spring将Bean的Id传递给setBeanName()方法</li>
+<li>如果Bean实现了BeanFactoryAware接口的话，Spring将调用setBeanFactory()方法，将BeanFactory容器实例传入</li>
+<li>如果Bean实现了ApplicationContextAware接口的话，Spring将调用Bean的setApplicationContext()方法，将bean所在应用上下文引用传入进来。</li>
+<li>如果Bean实现了BeanPostProcessor接口，Spring就将调用他们的postProcessBeforeInitialization()方法。</li>
+<li>如果Bean 实现了InitializingBean接口，Spring将调用他们的afterPropertiesSet()方法。类似的，如果bean使用init-method声明了初始化方法，该方法也会被调用</li>
+<li>如果Bean 实现了BeanPostProcessor接口，Spring就将调用他们的postProcessAfterInitialization()方法。</li>
+<li>此时，Bean已经准备就绪，可以被应用程序使用了。他们将一直驻留在应用上下文中，直到应用上下文被销毁。</li>
+<li>如果bean实现了DisposableBean接口，Spring将调用它的destory()接口方法，同样，如果bean使用了destory-method 声明销毁方法，该方法也会被调用。</li>
 </ul>
-<h4 id="2-1表级锁和行级锁对比"><a href="#2-1表级锁和行级锁对比" class="headerlink" title="2.1表级锁和行级锁对比"></a>2.1表级锁和行级锁对比</h4><ul>
-<li>表级锁：MySQL中锁定粒度最大的一种锁，对当前操作的整张表加锁，实现简单，资源消耗也比较少，<strong>不会出现死锁</strong>。锁定粒度最大，触发锁冲突的概率最高，并发度最低</li>
-<li>行级锁：MySQL中锁定粒度最小的一种锁，值针对当前操作的行进行加锁。行级锁能大大减少数据库操作的冲突。加锁粒度最小，并发程度高，但加锁的开销也最大，加锁慢，<strong>会出现死锁</strong></li>
+<h4 id="2-1-谈谈对Spring-MVC的了解？"><a href="#2-1-谈谈对Spring-MVC的了解？" class="headerlink" title="2.1 谈谈对Spring MVC的了解？"></a>2.1 谈谈对Spring MVC的了解？</h4><p>简单原理图：<img src="/2021/09/11/Spring%E6%A1%86%E6%9E%B6/60679444.jpg" alt="60679444"></p>
+<p>用户发起请求，前端控制器接收数据并拦截请求，调用service层，service调用dao层返回处理结果，控制器接收结果返回，通过视图渲染返回视图</p>
+<p><strong>2.2 Spring MVC工作原理？</strong></p>
+<p><img src="/2021/09/11/Spring%E6%A1%86%E6%9E%B6/49790288.jpg" alt="49790288"></p>
+<ol>
+<li>客户端（浏览器）发送请求，直接请求到 DispatcherServlet。</li>
+<li>DispatcherServlet 根据请求信息调用 HandlerMapping，解析请求对应的 Handler。</li>
+<li>解析到对应的 Handler（也就是我们平常说的 Controller 控制器）后，开始由 HandlerAdapter 适配器处理。</li>
+<li>HandlerAdapter 会根据 Handler 来调用真正的处理器开处理请求，并处理相应的业务逻辑。</li>
+<li>处理器处理完业务后，会返回一个 ModelAndView 对象，Model 是返回的数据对象，View 是个逻辑上的 View。</li>
+<li>ViewResolver 会根据逻辑 View 查找实际的 View。</li>
+<li>DispaterServlet 把返回的 Model 传给 View（视图渲染）。</li>
+<li>把 View 返回给请求者（浏览器）</li>
+</ol>
+<h4 id="2-2-Spring框架中用到了哪几个设计模式？"><a href="#2-2-Spring框架中用到了哪几个设计模式？" class="headerlink" title="2.2 Spring框架中用到了哪几个设计模式？"></a>2.2 Spring框架中用到了哪几个设计模式？</h4><ul>
+<li>工厂设计模式：Spring工厂模式 通过 <code>BeanFactory</code>和<code>ApplicationContext</code>创建Bean对象</li>
+<li>单例设计模式：Spring中 Bean默认都是单例</li>
+<li>代理设计模式：Spring中AOP功能的实现</li>
+<li>包装器设计模式：项目需要连接多个数据库，可以根据用户需求动态切换不同的数据源</li>
+<li>适配器模式：Spring AOP的增强或者通知使用到了适配器模式，SpringMVC也使用到了，适配Controller；</li>
+<li>观察者模式： Spring 事件驱动模型就是观察者模式很经典的一个应用</li>
 </ul>
-<h4 id="2-2-InnoDB引擎的锁的算法"><a href="#2-2-InnoDB引擎的锁的算法" class="headerlink" title="2.2 InnoDB引擎的锁的算法"></a>2.2 InnoDB引擎的锁的算法</h4><ul>
-<li>Rcord Lock：单个行记录上锁</li>
-<li>Gap Lock：间隙锁，锁定一个范围，不包括记录本身</li>
-<li>Next-Key lock：record+gap锁定一个范围，包含记录本身</li>
+<h4 id="2-3-Spring管理事务的方式有几种？"><a href="#2-3-Spring管理事务的方式有几种？" class="headerlink" title="2.3 Spring管理事务的方式有几种？"></a>2.3 Spring管理事务的方式有几种？</h4><ul>
+<li>编程式事务：在代码中硬编码</li>
+<li>声明式事务：在配置文件中配置</li>
 </ul>
-<h4 id="3-0大表优化"><a href="#3-0大表优化" class="headerlink" title="3.0大表优化"></a>3.0大表优化</h4><ul>
-<li><strong>限定数据的范围：</strong>务必禁止不带任何限制数据范围条件的查询语句。比如：我们当用户在查询订单历史的时候，我们可以控制在一个月的范围内</li>
-<li><strong>读写分离：</strong>经典的数据库拆分方案，主库负责写，从库负责读</li>
-<li><strong>垂直拆分：</strong>简单来说垂直拆分是指数据表列的拆分，把一张列比较多的表拆分为多张表</li>
-<li><strong>水平拆分：</strong>保持数据表结构不变，通过某种策略存储数据分片</li>
-</ul>
-<h4 id="3-1分库分表后，id主键如何处理？"><a href="#3-1分库分表后，id主键如何处理？" class="headerlink" title="3.1分库分表后，id主键如何处理？"></a>3.1分库分表后，id主键如何处理？</h4><p>生成全局ID的方式</p>
+<p>声明式事务分为两种：</p>
+<ol>
+<li>基于XML的声明式事务</li>
+<li>基于注解的声明式事务</li>
+</ol>
+<h4 id="2-4-Spring-事务中的隔离级别有哪几种"><a href="#2-4-Spring-事务中的隔离级别有哪几种" class="headerlink" title="2.4 Spring 事务中的隔离级别有哪几种?"></a>2.4 Spring 事务中的隔离级别有哪几种?</h4><p>和MySQL事务隔离级别类似，但多了一个默认的隔离级别</p>
 <ul>
-<li>UUID：</li>
-<li>数据库自增ID</li>
-<li>利用redis生成ID</li>
-<li>Twitter的snowflake算法</li>
-<li>美团的leaf分布式ID生成系统</li>
+<li><strong>TransactionDefinition.ISOLATION_DEFAULT:</strong> 使用后端数据库默认的隔离级别，Mysql 默认采用的 REPEATABLE_READ隔离级别 Oracle 默认采用的 READ_COMMITTED隔离级别.</li>
+<li><strong>TransactionDefinition.ISOLATION_READ_UNCOMMITTED:</strong> 最低的隔离级别，允许读取尚未提交的数据变更，可能会导致脏读、幻读或不可重复读</li>
+<li><strong>TransactionDefinition.ISOLATION_READ_COMMITTED:</strong> 允许读取并发事务已经提交的数据，可以阻止脏读，但是幻读或不可重复读仍有可能发生</li>
+<li><strong>TransactionDefinition.ISOLATION_REPEATABLE_READ:</strong> 对同一字段的多次读取结果都是一致的，除非数据是被本身事务自己所修改，可以阻止脏读和不可重复读，但幻读仍有可能发生。</li>
+<li><strong>TransactionDefinition.ISOLATION_SERIALIZABLE:</strong> 最高的隔离级别，完全服从ACID的隔离级别。所有的事务依次逐个执行，这样事务之间就完全不可能产生干扰，也就是说，该级别可以防止脏读、不可重复读以及幻读。但是这将严重影响程序的性能。通常情况下也不会用到该级别</li>
 </ul>
-<h4 id="3-2Inner-join-、left-join、right-join有什么区别？"><a href="#3-2Inner-join-、left-join、right-join有什么区别？" class="headerlink" title="3.2Inner join 、left join、right join有什么区别？"></a>3.2Inner join 、left join、right join有什么区别？</h4><ul>
-<li>Inner join 内连接，在两张表进行连接查询时，只保留两张表中完全匹配的结果集</li>
-<li>left join 在两张表进行连接查询时，会返回左表所有的行，即使在右表中没有匹配的记录。</li>
-<li>right join 在两张表进行连接查询时，会返回右表所有的行，即使在左表中没有匹配的记录。</li>
+<h4 id="2-5-Transactional-rollbackFor-Exception-class-注解了解吗？"><a href="#2-5-Transactional-rollbackFor-Exception-class-注解了解吗？" class="headerlink" title="2.5@Transactional(rollbackFor = Exception.class)注解了解吗？"></a>2.5@Transactional(rollbackFor = Exception.class)注解了解吗？</h4><p>我们知道：Exception分为运行时异常RuntimeException和非运行时异常。事务管理对于企业应用来说是至关重要的，即使出现异常情况，它也可以保证数据的一致性。</p>
+<p>当<code>@Transactional</code>注解作用于类上时，该类的所有 public 方法将都具有该类型的事务属性，同时，我们也可以在方法级别使用该标注来覆盖类级别的定义。如果类或者方法加了这个注解，那么这个类里面的方法抛出异常，就会回滚，数据库里面的数据也会回滚。</p>
+<p>在<code>@Transactional</code>注解中如果不配置<code>rollbackFor</code>属性,那么事物只会在遇到<code>RuntimeException</code>的时候才会回滚,加上<code>rollbackFor=Exception.class</code>,可以让事物在遇到非运行时异常时也回滚。</p>
+<h4 id="2-6-Spring事务中哪几种事务传播行为？"><a href="#2-6-Spring事务中哪几种事务传播行为？" class="headerlink" title="2.6 Spring事务中哪几种事务传播行为？"></a>2.6 Spring事务中哪几种事务传播行为？</h4><ul>
+<li>支持当前事务：<ul>
+<li><strong>TransactionDefinition.PROPAGATION_REQUIRED：</strong> 如果当前存在事务，则加入该事务；如果当前没有事务，则创建一个新的事务。</li>
+<li><strong>TransactionDefinition.PROPAGATION_SUPPORTS：</strong> 如果当前存在事务，则加入该事务；如果当前没有事务，则以非事务的方式继续运行。</li>
+<li><strong>TransactionDefinition.PROPAGATION_MANDATORY：</strong> 如果当前存在事务，则加入该事务；如果当前没有事务，则抛出异常。（mandatory：强制性）</li>
+</ul>
+</li>
+<li>不支持当前事务<ul>
+<li><strong>TransactionDefinition.PROPAGATION_REQUIRES_NEW：</strong> 创建一个新的事务，如果当前存在事务，则把当前事务挂起。</li>
+<li><strong>TransactionDefinition.PROPAGATION_NOT_SUPPORTED：</strong> 以非事务方式运行，如果当前存在事务，则把当前事务挂起。</li>
+<li><strong>TransactionDefinition.PROPAGATION_NEVER：</strong> 以非事务方式运行，如果当前存在事务，则抛出异常。</li>
+</ul>
+</li>
+<li>其他情况<ul>
+<li><strong>TransactionDefinition.PROPAGATION_NESTED：</strong> 如果当前存在事务，则创建一个事务作为当前事务的嵌套事务来运行；如果当前没有事务，则该取值等价于TransactionDefinition.PROPAGATION_REQUIRED。</li>
+</ul>
+</li>
 </ul>
 
                 
@@ -624,7 +653,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://profond.github.io/2021/09/10/%E6%95%B0%E6%8D%AE%E5%BA%93/">https://profond.github.io/2021/09/10/%E6%95%B0%E6%8D%AE%E5%BA%93/</a>
+                    <a href="https://profond.github.io/2021/09/11/Spring%E6%A1%86%E6%9E%B6/">https://profond.github.io/2021/09/11/Spring%E6%A1%86%E6%9E%B6/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -662,8 +691,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                    <span class="chip bg-color">数据库</span>
+                                <a href="/tags/Spring/">
+                                    <span class="chip bg-color">Spring</span>
                                 </a>
                             
                         </div>
@@ -835,9 +864,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/09/11/Spring%E6%A1%86%E6%9E%B6/">
                     <div class="card-image">
@@ -855,9 +885,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -866,6 +896,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -884,13 +915,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/09/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                <a href="/2021/09/10/%E6%95%B0%E6%8D%AE%E5%BA%93/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="操作系统常识">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="数据库知识">
                         
-                        <span class="card-title">操作系统常识</span>
+                        <span class="card-title">数据库知识</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -901,7 +932,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-10
                             </span>
                         <span class="publish-author">
                             
@@ -914,8 +945,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
-                        <span class="chip bg-color">操作系统</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">数据库</span>
                     </a>
                     
                 </div>
