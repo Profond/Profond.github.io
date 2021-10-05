@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java基础知识, ColaMilk">
+    <meta name="keywords" content="JVM, ColaMilk">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java基础知识 | ColaMilk</title>
+    <title>JVM | ColaMilk</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -321,12 +321,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://colamilk-1306193308.cos.ap-nanjing.myqcloud.com/java.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java基础知识</h1>
+                    <h1 class="description center-align post-title">JVM</h1>
                 </div>
             </div>
         </div>
@@ -442,8 +442,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">Java</span>
+                            <a href="/tags/JVM/">
+                                <span class="chip bg-color">JVM</span>
                             </a>
                         
                     </div>
@@ -458,21 +458,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-04
+                    2021-10-05
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-26
+                    2021-10-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    876
+                    705
                 </div>
                 
 
@@ -492,62 +492,21 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>HashMap扩容机制：</strong>不指定初始值则初始容量16，每次扩容2n。指定初始值，会扩容成初始值2的幂次方</p>
-<p><strong>Hashtable扩容机制：</strong>不指定初始值则初始容量11，每次扩容2n+1。指定初始值，则使用初始值</p>
-<p><strong>volatile：</strong> 关键字除了防⽌ JVM 的指令重排 ，还有⼀个重要的作⽤就是保证变量的可⻅性，解决内存缓存不一致的问题。被该关键字修饰的变量每次使用都需要到主存获取最新的值</p>
-<p> <strong>ThreadLocal：</strong>使线程拥有专属的本地变量确保线程安全，避免引起线程竞争</p>
-<p><strong>ThreadLocal</strong> <strong>内存泄露问题：</strong>底层是类似Map的ThreadLocalMap数据结构，key是弱引用，value是强引用，垃圾回收(GC)的时候，当key没有被外部强引用的时候会被回收产生key为null的Entry，而留下value值永远无法被回收。而在ThreadLocalMap中，每次调用get(),set(),remove()它会自动清除key为null的记录</p>
-<h4 id="实现-Runnable-接⼝和-Callable-接⼝的区别："><a href="#实现-Runnable-接⼝和-Callable-接⼝的区别：" class="headerlink" title="实现 Runnable 接⼝和 Callable 接⼝的区别："></a>实现 Runnable 接⼝和 Callable 接⼝的区别：</h4><p>前者异常不会返回结果和抛出异常，后者会</p>
-<h4 id="执⾏-execute-⽅法和-submit-⽅法的区别是什么呢？"><a href="#执⾏-execute-⽅法和-submit-⽅法的区别是什么呢？" class="headerlink" title="执⾏ execute()⽅法和 submit()⽅法的区别是什么呢？"></a>执⾏ execute()⽅法和 submit()⽅法的区别是什么呢？</h4><p>前者用于提交不需要返回值的任务无法判断线程池是执行与否，后者用于提交需要返回值的任务，执行成功会返回一个future对象(通过get方法可以获取返回值)。</p>
-<h4 id="单例模式-双重检验锁实现对象单例，线程安全"><a href="#单例模式-双重检验锁实现对象单例，线程安全" class="headerlink" title="单例模式(双重检验锁实现对象单例，线程安全)"></a>单例模式(双重检验锁实现对象单例，线程安全)</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">private</span> <span class="token keyword">volatile</span> <span class="token keyword">static</span> <span class="token class-name">Singleton</span> uniqueInstance<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Singleton</span> <span class="token function">getUniqueinstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>uniqueinstance <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-            <span class="token keyword">synchronized</span><span class="token punctuation">(</span><span class="token class-name">Singleton</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-                <span class="token keyword">if</span><span class="token punctuation">(</span>uniqueinstance<span class="token operator">==</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-                    uniqueInstance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token punctuation">&#125;</span>
-            <span class="token punctuation">&#125;</span>
-        <span class="token punctuation">&#125;</span>
-         <span class="token keyword">return</span> uniqueInstance<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="懒汉模式-加synchronized锁-："><a href="#懒汉模式-加synchronized锁-：" class="headerlink" title="懒汉模式(加synchronized锁)："></a>懒汉模式(加synchronized锁)：</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">Single</span> single <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token function">singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">synchronized</span> <span class="token class-name">Singleton</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>single <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-            single <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-        <span class="token keyword">return</span> single<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>原理：需要使用的时候才实例化这个单例(调用getInstance方法)</p>
-<h4 id="饿汉模式-线程安全-："><a href="#饿汉模式-线程安全-：" class="headerlink" title="饿汉模式(线程安全)："></a>饿汉模式(线程安全)：</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">Single</span> single <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">Singleton</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token keyword">return</span> single<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>原理：类的初始化过程中，类同时已经被实例化出来</p>
-<h4 id="AQS原理-⽤来构建锁和同步器的框架"><a href="#AQS原理-⽤来构建锁和同步器的框架" class="headerlink" title="AQS原理(⽤来构建锁和同步器的框架):"></a>AQS原理(⽤来构建锁和同步器的框架):</h4><p>如果被请求的共享资源空闲，则将当前请求资源的线程设置为有效的⼯作线</p>
-<p>程，并且将共享资源设置为锁定状态。如果被请求的共享资源被占⽤，那么就需要⼀套线程阻塞</p>
-<p>等待以及被唤醒时锁分配的机制，这个机制 AQS 是⽤ CLH 队列锁实现的，即将暂时获取不到锁</p>
-<p>的线程加⼊到队列中。</p>
-<p>**个人理解:**类似于当有空余的资源可以投入到一个项目当中，这个项目被列为可行项目，项目所需要的资金会被锁定，如果资源暂时被占用，我们就通过约定的方式来等待和通知资源可以分配</p>
-<h4 id="常见的设计模式？"><a href="#常见的设计模式？" class="headerlink" title="常见的设计模式？"></a>常见的设计模式？</h4><ul>
-<li>工厂设计模式</li>
-<li>单例设计模式：在内存中保证对象的实例只有一个</li>
-<li>代理设计模式：Spring框架中Aop就是通过代理模式实现</li>
-<li>适配器设计模式：SpringMVC中contoller就使用到了适配器模式</li>
-<li>装饰者设计模式：不改变原有对象结构的基础上，增加新的功能</li>
-<li>状态模式：允许对象在内部状态改变的时候改变它的行为，对象看起来好像改变了它的类</li>
-</ul>
+                <h4 id="1-JVM"><a href="#1-JVM" class="headerlink" title="1.JVM"></a>1.JVM</h4><p><img src="/2021/10/05/JVM/JVM.png"></p>
+<p><img src="/2021/10/05/JVM/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6.png"></p>
+<h4 id="2-双亲委派机制"><a href="#2-双亲委派机制" class="headerlink" title="2.双亲委派机制"></a>2.双亲委派机制</h4><p>**Bootstrap classLoader:**主要负责加载核心的类库(java.lang.*等)，构造ExtClassLoader和APPClassLoader。</p>
+<p><strong>ExtClassLoader：</strong>主要负责加载jre/lib/ext目录下的一些扩展的jar。</p>
+<p><strong>AppClassLoader：</strong>主要负责加载应用程序的主函数类</p>
+<p><strong>向上委派，向下加载：</strong></p>
+<p>AppClassLoader—–&gt;ExtClassLoader—–&gt;Bootstrap classLoader</p>
+<p>当一个XXX.class这样的文件要被加载时。不考虑我们自定义类加载器，首先会在AppClassLoader中检查是否加载过，如果有那就无需再加载了。如果没有，那么会拿到父加载器，然后调用父加载器的loadClass方法。父类中同理也会先检查自己是否已经加载过，如果没有再往上，直到到达Bootstrap classLoader之前，都是在检查是否加载过，并不会选择自己去加载。直到BootstrapClassLoader，已经没有父加载器了，这时候开始考虑自己是否能加载了，如果自己无法加载，会下沉到子加载器去加载，一直到最底层，如果没有任何加载器能加载，就会抛出ClassNotFoundException</p>
+<p>设计的初衷：防止程序员修改核心类产生难以预料的Bug</p>
+<h4 id="3-类加载"><a href="#3-类加载" class="headerlink" title="3.类加载"></a>3.类加载</h4><p><img src="/2021/10/05/JVM/%E7%B1%BB%E5%8A%A0%E8%BD%BD.png"></p>
+<h4 id="4-JMM？"><a href="#4-JMM？" class="headerlink" title="4.JMM？"></a>4.JMM？</h4><p> <strong>JMM</strong>（java内存模型）Java Memory Model，本身是一个抽象的概念，<strong>不是真实存在的</strong>，它描述的是一组规则或规范，通过这组规范定义了程序中各个变量（包括实例字段、静态字段和构成数组对象的元素）的<strong>访问方式</strong>。</p>
+<p><strong>它是干嘛的？</strong></p>
+<p>缓存一致性协议，用于定义数据读写规则</p>
+<p>JMM同步规定<br>（1）线程解锁前，必须把共享变量的值刷新回主内存<br>（2）线程加锁前，必须读取主内存的最新值到自己的工作内存<br>（3）加锁解锁是同一把锁</p>
+<p>由于JVM运行程序的实体是线程,而每个线程创建时JVM都会为其创建一个工作内存(有些地方成为栈空间),工作内存是每个线程的私有数据区域,而Java内存模型中规定所有变量都存储在主内存,主内存是共享内存区域,所有线程都可访问,但线程对变量的操作(读取赋值等)必须在工作内存中进行,首先要将变量从主内存拷贝到自己的工作空间,然后对变量进行操作,操作完成再将变量写回主内存 ,不能直接操作主内存中的变量,各个线程中的工作内存储存着主内存中的变量副本拷贝,因此不同的线程无法访问对方的工作内存,此案成间的通讯(传值) 必须通过主内存来完成</p>
 
                 
             </div>
@@ -574,7 +533,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://profond.github.io/2021/09/04/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">https://profond.github.io/2021/09/04/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</a>
+                    <a href="https://profond.github.io/2021/10/05/JVM/">https://profond.github.io/2021/10/05/JVM/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -612,8 +571,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
+                                <a href="/tags/JVM/">
+                                    <span class="chip bg-color">JVM</span>
                                 </a>
                             
                         </div>
@@ -785,16 +744,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/09/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                <a href="/2021/10/05/JVM/">
                     <div class="card-image">
                         
-                        <img src="https://colamilk-1306193308.cos.ap-nanjing.myqcloud.com/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg" class="responsive-img" alt="计算机网络">
                         
-                        <span class="card-title">计算机网络</span>
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="JVM">
+                        
+                        <span class="card-title">JVM</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -804,9 +765,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -815,11 +776,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
-                        <span class="chip bg-color">计算机网络</span>
+                    <a href="/tags/JVM/">
+                        <span class="chip bg-color">JVM</span>
                     </a>
                     
                 </div>
@@ -833,12 +795,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/24/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/">
+                <a href="/2021/09/23/SpringBoot%E6%95%B4%E5%90%88Shiro%E6%A1%86%E6%9E%B6/">
                     <div class="card-image">
                         
-                        <img src="https://colamilk-1306193308.cos.ap-nanjing.myqcloud.com/hexo.jpg" class="responsive-img" alt="hexo搭建博客图片无法显示问题">
                         
-                        <span class="card-title">hexo搭建博客图片无法显示问题</span>
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="SpringBoot整合Shiro框架">
+                        
+                        <span class="card-title">SpringBoot整合Shiro框架</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -849,7 +812,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-23
                             </span>
                         <span class="publish-author">
                             
@@ -862,8 +825,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/shiro/">
+                        <span class="chip bg-color">shiro</span>
                     </a>
                     
                 </div>
