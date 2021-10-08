@@ -465,7 +465,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-18
+                    2021-10-08
                 </div>
                 
 
@@ -500,12 +500,13 @@
 </ol>
 <h4 id="站在JVM的角度解读进程和线程？"><a href="#站在JVM的角度解读进程和线程？" class="headerlink" title="站在JVM的角度解读进程和线程？"></a>站在JVM的角度解读进程和线程？</h4><p>线程被称为轻量型的进程，是比进程更小的运行单位，但是和进程不同的是，同一类线程共享同一组系统资源，共享同一块内存空间，线程和线程之间可能相互影响。而进程是相互独立的，互不干扰。</p>
 <p>一个进程里有多个线程，这些线程共享进程的堆资源和方法区资源(JDK1.8后被元空间取代)，每个线程都拥有属于自己的虚拟机栈，本地方法栈，程序计数器；线程执行开销小，但不利于资源的管理和保护，进程相反</p>
-<h4 id="线程分为几个状态？"><a href="#线程分为几个状态？" class="headerlink" title="线程分为几个状态？"></a>线程分为几个状态？</h4><ol>
-<li>创建状态(new)</li>
-<li>就绪状态(ready)</li>
-<li>运行状态(running)</li>
-<li>阻塞状态(waiting)</li>
-<li>结束状态(terminated)</li>
+<h4 id="线程分为几个状态-生命周期-？"><a href="#线程分为几个状态-生命周期-？" class="headerlink" title="线程分为几个状态(生命周期)？"></a>线程分为几个状态(生命周期)？</h4><ol>
+<li>new</li>
+<li>Runnable</li>
+<li>Blocked</li>
+<li>waiting —–死死的等待</li>
+<li>Timed_waiting ——-超时等待</li>
+<li>terminated</li>
 </ol>
 <h4 id="用户态和系统态？"><a href="#用户态和系统态？" class="headerlink" title="用户态和系统态？"></a>用户态和系统态？</h4><p>用户态(常态)：以用户态运行的进程可以读取用户程序的所有数据；</p>
 <p>系统态：以系统态运行的进程或者程序可以访问计算机所有的资源，不受约束；</p>
