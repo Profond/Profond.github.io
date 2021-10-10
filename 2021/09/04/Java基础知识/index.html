@@ -465,14 +465,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-26
+                    2021-10-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    876
+                    902
                 </div>
                 
 
@@ -515,7 +515,7 @@
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="懒汉模式-加synchronized锁-："><a href="#懒汉模式-加synchronized锁-：" class="headerlink" title="懒汉模式(加synchronized锁)："></a>懒汉模式(加synchronized锁)：</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">Single</span> single <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">Singleton</span> single <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
     <span class="token keyword">private</span> <span class="token function">singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
     <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">synchronized</span> <span class="token class-name">Singleton</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
         <span class="token keyword">if</span><span class="token punctuation">(</span>single <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
@@ -527,7 +527,7 @@
 
 <p>原理：需要使用的时候才实例化这个单例(调用getInstance方法)</p>
 <h4 id="饿汉模式-线程安全-："><a href="#饿汉模式-线程安全-：" class="headerlink" title="饿汉模式(线程安全)："></a>饿汉模式(线程安全)：</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">Single</span> single <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">Singleton</span> single <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">private</span> <span class="token class-name">Singleton</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
     <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">Singleton</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
         <span class="token keyword">return</span> single<span class="token punctuation">;</span>
@@ -535,6 +535,10 @@
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>原理：类的初始化过程中，类同时已经被实例化出来</p>
+<blockquote>
+<p>单例模式下的无参构造器必须是Private</p>
+</blockquote>
+<p>如何破坏单例模式？ —–&gt; <strong>反射</strong></p>
 <h4 id="AQS原理-⽤来构建锁和同步器的框架"><a href="#AQS原理-⽤来构建锁和同步器的框架" class="headerlink" title="AQS原理(⽤来构建锁和同步器的框架):"></a>AQS原理(⽤来构建锁和同步器的框架):</h4><p>如果被请求的共享资源空闲，则将当前请求资源的线程设置为有效的⼯作线</p>
 <p>程，并且将共享资源设置为锁定状态。如果被请求的共享资源被占⽤，那么就需要⼀套线程阻塞</p>
 <p>等待以及被唤醒时锁分配的机制，这个机制 AQS 是⽤ CLH 队列锁实现的，即将暂时获取不到锁</p>
